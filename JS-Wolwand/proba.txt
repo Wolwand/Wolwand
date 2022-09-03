@@ -1,0 +1,670 @@
+.container {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50, -50%);
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.container .btn {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background: #fff;
+    box-shadow: 0 5px 15px -5px #aaa;
+    margin: 10px;
+    border-radius: 30%;
+    overflow: hidden;
+    position: relative;
+    color: #ffffff;
+}
+
+.container .btn i {
+    position: relative;
+    z-index: 4;
+    line-height: 90px;
+    font-size: 26px;
+    transition:  0.3s ease-in-out;
+}
+
+.container .btn::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(#00c6ff);
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.container .fa-twitter {
+    color: #00c6ff;
+}
+
+.container .tw::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(rgb(56, 54, 56) 3%,
+    rgb(255, 255, 255) 98%);
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.container .fa-instagram {
+    color: #e33d68;
+}
+
+.container .ig::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(rgb(56, 54, 56) 3%,
+    rgb(255, 255, 255) 98%);
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.container .fa-github {
+    color: #383838;
+}
+
+.container .gh::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(rgb(56, 54, 56) 3%,
+    rgb(255, 255, 255) 98%);
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.container .btn::hover i {
+    color: #fff;
+    transform: scale(1.3);
+}
+
+.container .btn:hover::before {
+    animation: onHover 0.7s 1;
+    left: -10%;
+    top: -10%;
+}
+
+@keyframes onHover {
+    0% {
+        left: -110%;
+        top: 90%;
+    }
+    50% {
+        left: 10%;
+        top: -30%;
+    }
+    100% {
+        left: -10%;
+        top: -10%;
+    }
+}
+
+
+.burger div {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    width: 25px;
+    height: 3px;
+    border-radius: 5%;
+    background-color: black;
+    margin: 5px;
+    box-shadow: 0 5px 15px -5px #aaa;
+}
+
+
+
+@media (max-width: 1200px){
+    .btn{
+        display: flex;
+        z-index: 100;  
+    }
+    header{
+        justify-content: space-between;
+        padding: 0.2em;
+    }
+    .nav{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        background-color: #f8f8f8;
+        transform: translateY(-110%);
+        transition: all .4s;
+    }
+    input:checked ~ .nav{
+        transform: translateY(0%);
+    }
+    input:checked::before{
+        content: '\f00d';
+    } 
+}
+@media (max-width: 700px){
+    .nav ol{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+html header
+
+<nav>
+		<p class="Logo">Wolwand</p>
+		<div class="nav">
+			<ol>
+				<li><a href="#">Home </a>
+				</li>
+				<li><a href="#">About </a>
+				</li>
+				<li><a href="#">Contact </a>
+				</li>
+			</ol>
+		</div>
+		<a href="#" class="toggle-button">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</a>
+		</div>
+	</nav>
+
+
+header
+    
+    
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    width: 100%;
+    height: 50px;
+    background: #5a5a5a transparent 50%;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+.Logo{
+    color: rgb(15, 15, 15);
+    font-size: 1.5em;
+    position: absolute;
+    top: 3%;
+    left: 15%;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+    .nav ol {
+        display: none;
+        width: 100%;
+    }
+
+
+.nav{
+    display: flex;
+    align-items: center;
+}
+.nav ol{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 30%;
+    position: absolute;
+    top: 3%;
+    right: 10%
+   
+}
+.btn{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    display: none;
+}
+.btn::before{
+    content: '\f0c9';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Font Awsome 5 Free';
+    font-weight: 700;
+    font-size: 2em;
+}
+.nav ol li{ margin: lem;}
+nav ol li a{
+    text-decoration: none;
+    padding: 0.2em 1.2em 0.9em 1.2em;
+    border-radius: 30%;
+    color: rgb(19, 18, 18);
+    transition: all 4s;
+    position: relative;
+    z-index: 1;
+}
+.nav ol li a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 41px;
+    border-radius: 8%;
+    background: #a7a7a7, transparent;
+        box-shadow: 0 5px 15px -5px rgb(0, 0, 0);
+    opacity: 5.0;
+    transform-origin: bottom;
+        opacity: 1.0;
+    transform: scaleY(0.05);
+    z-index: -1;
+    transition: all .4s;
+}
+.nav ol li a:hover::before{ transform: scaleY(1.1);}
+.nav ol li a:hover{color: white;}    
+
+.toggle-button {
+    position: absolute;
+    top: 3%;
+    right: 3rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white ;
+    border-radius: 10px;
+}
+
+
+responsive 
+
+@media (max-width: 800px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .nav ol {
+        display: none; 
+        width: 100%;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav ol {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav ol li {
+        text-align: center;
+    }
+
+    .nav ol li a {
+        padding: .5rem 1rem;
+    }
+
+    .nav ol.active {
+        display: flex;
+    }
+}
+
+
+tw boja 
+linear-gradient(#00c6ff, #0072ff);
+
+ikonice boja
+background: linear-gradient(rgb(56, 54, 56) 3%,
+        rgb(255, 255, 255) 98%);;
+
+cool boja 
+background: linear-gradient(#979797, #525252);
+
+
+.navbar-links li a {
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+    display: block;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 3%;
+    right: 3rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+
+social
+
+.container {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 40%;
+}
+
+.container a {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background-color: #fff;
+    display:  grid;
+    place-items: center;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #aaa;
+    font-size: 28px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.container a:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.container a i {
+    transition: transform 0.3s;
+}
+
+.container a::before {
+    content: "";
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    background-color: #ffffff;
+    z-index: -1;
+    transform: rotate(45deg);
+    top: -15%;
+    left: 5%;
+    transition: transform 0.3s;
+}
+
+.container a:hover {
+    color: #000000;
+    background: linear-gradient(#979797, #525252);
+}
+
+.container a:hover i {
+    transform: scale(1.2);
+}
+.container a:hover::before {
+    transform: rotate(45deg) translate(15%, -100%);
+}
+
+
+social html
+
+<div class="container">
+			<a href="#" class="btn tw">
+				<i class="fa-brands fa-twitter"></i>
+			</a>
+			<a href="#" class="btn ig">
+				<i class="fa-brands  fa-instagram"></i>
+			</a>
+			<a href="#" class="btn gh">
+				<i class="fa-brands fa-github"></i>
+			</a>
+		</div>
+
+
+
+
+<input type="tekst" placeholder="Type your text..." />
+
+
+
+
+
+
+const input = document.querySelector(".pwd input");
+const eye = document.querySelector(".pwd .fa-eye-slash");
+const lock = document.querySelector(".pwd .fa-lock");
+const overlay = document.querySelector(".pwd . overlay");
+eye.addEventListener("click", () => {
+    if (input.type === "tekst") {
+
+        input.type = "text";
+
+        eye.classList.remove("fa-eye-slash");
+        eye.classList.add("fa-eye");
+
+        setTimeout(() => {
+            lock.getElementsByClassName.color  = "#111625";
+        }, 500);
+    }
+    else {
+        input.type = "tekst";
+
+        eye.classList.remove("fa-eye");
+        eye.classList.add("fa-eye-slash");
+    }
+    overlay.classList.toggle("overlay-cover");
+});
+
+
+
+
+
+
+
+.container {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 40%;
+}
+
+.container a {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background-color: #fff;
+    display: grid;
+    place-items: center;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #aaa;
+    font-size: 28px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.container a:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.container a i {
+    transition: transform 0.3s;
+}
+
+.container a::before {
+    content: "";
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    background-color: #ffffff;
+    z-index: -1;
+    transform: rotate(45deg);
+    top: -15%;
+    left: 5%;
+    transition: transform 0.3s;
+}
+
+.container a:hover {
+    color: #000000;
+    background: linear-gradient(#3f528d, #111625);
+}
+
+.container a:hover i {
+    transform: scale(1.2);
+}
+
+.container a:hover::before {
+    transform: rotate(45deg) translate(15%, -100%);
+}
+
+
+
+
+
+
+
+
+.container {
+    display: flex;
+    position: absolute;
+    bottom: -1400px;
+}
+
+.container a {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background-color: #fff;
+    display: grid;
+    place-items: center;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #aaa;
+    font-size: 28px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.container a:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.container a i {
+    transition: transform 0.3s;
+}
+
+.container a::before {
+    content: "";
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    background-color: #ffffff;
+    z-index: -1;
+    transform: rotate(45deg);
+    top: -15%;
+    left: 5%;
+    transition: transform 0.3s;
+}
+
+.container a:hover {
+    color: #000000;
+    background: linear-gradient(#111625, #171b29, #0f1529, #1c233a);
+}
+
+.container a:hover i {
+    transform: scale(1.2);
+}
+
+.container a:hover::before {
+    transform: rotate(45deg) translate(15%, -100%);
+}
+
+
+
+
+
+
+.footer li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 41px;
+    border-radius: 8%;
+    background: #a7a7a7, transparent;
+    box-shadow: 0 5px 15px -5px rgb(0, 0, 0);
+    opacity: 5.0;
+    transform-origin: bottom;
+    opacity: 1.0;
+    transform: scaleY(0.05);
+    z-index: -1;
+    transition: all .4s;
+}
+
+
+
+
+<div class="about-text">
+		<div class="bio1">
+			
+		</div>
+		<div class="bio2">
+			
+		</div>
+		<div class="bio3">
+			
+		</div>
+		<div class="bio4">
+			
+		</div>
+	</div>
+
+
+
+
+
+    .bio1 p {
+    bottom: -500px;
+    left: 28%;
+    width: auto;
+    max-width: 1550px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: monospace;
+    font-size: 1.5em;
+    color: #111625;
+    text-align: bottom;
+    position: absolute;
+}
